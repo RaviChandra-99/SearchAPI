@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Page</title>
+    <link rel="stylesheet" href="moviestyle2.css">
+</head>
+<body>
+    <nav>
+
+        <div class="navbar object-width ">
+            <a class="logo" href="movies.html">MOVIEWORLD.</a>
+            <div class="search">
+                <!-- <input id="searchtext" type="text" placeholder="search here..."> -->
+                <!-- <button id="searchbutton">Search</button> -->
+                <a id="searchbutton" href="movies.html">BACK</a>
+            </div>
+        </div>
+    </nav>
+    <main id="movies-detail">
+        <div class="mms">
+            <div class="imge">
+                <img id="poster" src="" alt="">
+            </div>
+            <div class="title">
+                <h2 id="title"></h2>
+                <span id="rating"></span>
+            
+            <h3>Overview:</h3>
+            <p id="overview"></p>
+        </div>
+        </div>
+    </main>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const posterPath = params.get('poster_path');
+            const title = params.get('original_title');
+            const rating = params.get('vote_average');
+            const overview = params.get('overview');
+            
+            document.getElementById('poster').src = posterPath;
+            document.getElementById('title').textContent = title;
+            document.getElementById('rating').textContent = rating;
+            document.getElementById('overview').textContent = overview;
+        });
+    </script>
+</body>
+</html>

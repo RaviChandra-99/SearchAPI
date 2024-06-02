@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #maintext{
+            color: rgb(217, 183, 240);
+            font-size: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 11%;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        .box{
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        #news{
+            padding: 4rem;
+         border: none;
+         text-decoration: none;
+         border-radius: 5px;
+         color: black;
+         background-color: rgb(18, 237, 113);
+        cursor: pointer;
+        margin-left: 10px;
+        }
+        #movies{
+            padding: 4rem;
+         border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(189, 237, 18);
+    cursor: pointer;
+    margin-left: 10px;
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+  <body style="background-image: url(https://img.freepik.com/free-photo/thumbs-up-network-circuit-board-link-connection-technology_1379-883.jpg?w=1060&t=st=1716999532~exp=1717000132~hmac=c05da81b83c1de59fe9b18551b0345476786783bbd5881ced3a98565a3c6ebf4)
+  ;background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+    <div id="maintext">
+        <h1>Welcome to Search-API</h1>
+    </div>
+    <div class="box" id="subtext">
+
+        <a id="news" href="news.html">NEWS</a>
+        <a id="movies" href="movies.html">MOVIES</a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+           
+            setTimeout(() => {
+        const maint = document.getElementById("maintext");
+        maint.style.opacity = 0;
+    }, 2000);
+
+    setTimeout(() => {
+        const subt = document.querySelector(".box");
+        subt.style.opacity = 1;
+    }, 3000);
+
+        })
+    </script>
+</body>
+</html>
